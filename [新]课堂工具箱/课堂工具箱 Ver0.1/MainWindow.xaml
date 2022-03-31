@@ -1,0 +1,108 @@
+﻿<pu:WindowX x:Class="课堂工具箱_Ver0._1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:pu="clr-namespace:Panuon.UI.Silver;assembly=Panuon.UI.Silver"
+        xmlns:purs="clr-namespace:Panuon.UI.Silver.Resources;assembly=Panuon.UI.Silver"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:课堂工具箱_Ver0._1"
+        mc:Ignorable="d"
+        Title="程序加载失败" 
+        Height="500" 
+        Width="800" 
+        BorderBrush="#0099FF"
+        BorderThickness="1"
+        pu:WindowXCaption.Background="#0099FF"
+        pu:WindowXCaption.Foreground="White" 
+        ResizeMode="CanMinimize" 
+        WindowStartupLocation="CenterScreen" FontSize="14" Closing="WindowX_Closing" Visibility="Visible">
+    <pu:WindowX.Background>
+        <ImageBrush ImageSource="图片资源/背景01.png"/>
+    </pu:WindowX.Background>
+    <pu:WindowXCaption.MinimizeButtonStyle>
+        <Style TargetType="Button"
+               BasedOn="{StaticResource {ComponentResourceKey ResourceId=WindowXMinimizeButtonStyle, TypeInTargetAssembly={x:Type pu:WindowX}}}">
+            <Setter Property="Background"
+                    Value="Transparent" />
+            <Setter Property="Foreground"
+                    Value="White" />
+            <Setter Property="pu:ButtonHelper.HoverBackground"
+                    Value="#33FFFFFF" />
+            <Setter Property="MaxWidth"
+                    Value="40" />
+            <Setter Property="MaxHeight"
+                    Value="40" />
+        </Style>
+    </pu:WindowXCaption.MinimizeButtonStyle>
+    <pu:WindowXCaption.MaximizeButtonStyle>
+        <Style TargetType="Button"
+               BasedOn="{StaticResource {ComponentResourceKey ResourceId=WindowXMaximizeButtonStyle, TypeInTargetAssembly={x:Type pu:WindowX}}}">
+            <Setter Property="Background"
+                    Value="Transparent" />
+            <Setter Property="Foreground"
+                    Value="White" />
+            <Setter Property="pu:ButtonHelper.HoverBackground"
+                    Value="#33FFFFFF" />
+            <Setter Property="MaxWidth"
+                    Value="40" />
+            <Setter Property="MaxHeight"
+                    Value="40" />
+        </Style>
+    </pu:WindowXCaption.MaximizeButtonStyle>
+    <pu:WindowXCaption.CloseButtonStyle>
+        <Style TargetType="Button"
+               BasedOn="{StaticResource {ComponentResourceKey ResourceId=WindowXCloseButtonStyle, TypeInTargetAssembly={x:Type pu:WindowX}}}">
+            <Setter Property="Background"
+                    Value="Transparent" />
+            <Setter Property="Foreground"
+                    Value="White" />
+            <Setter Property="pu:ButtonHelper.HoverBackground"
+                    Value="#E81123" />
+            <Setter Property="MaxWidth"
+                    Value="40" />
+            <Setter Property="MaxHeight"
+                    Value="40" />
+        </Style>
+    </pu:WindowXCaption.CloseButtonStyle>
+    <Grid>
+        <Button x:Name="结束进程BT" Content="结束进程" HorizontalAlignment="Left" Margin="11,10,0,0" VerticalAlignment="Top" Width="190" Height="80" BorderThickness="1" Foreground="White" BorderBrush="#FF00AEFF" FontSize="24" pu:ButtonHelper.ClickBackground="#1AFFFFFF" pu:ButtonHelper.HoverBorderBrush="#E81123" pu:ButtonHelper.HoverBackground="#59FFFFFF" Click="结束进程BT_Click">
+            <Button.Background>
+                <SolidColorBrush Color="White" Opacity="0.25"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="重启进程BT" Content="重启进程" HorizontalAlignment="Left" Margin="401,10,0,0" VerticalAlignment="Top" Width="190" Height="80" BorderThickness="1" Foreground="White" BorderBrush="#FF00AEFF" FontSize="24" pu:ButtonHelper.ClickBackground="#1AFFFFFF" pu:ButtonHelper.HoverBorderBrush="#E81123" pu:ButtonHelper.HoverBackground="#59FFFFFF" Click="重启进程BT_Click">
+            <Button.Background>
+                <SolidColorBrush Color="White" Opacity="0.25"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="加载进程BT" Content="加载进程" HorizontalAlignment="Left" Margin="206,10,0,0" VerticalAlignment="Top" Width="190" Height="80" BorderThickness="1" Foreground="White" BorderBrush="#FF00AEFF" FontSize="24" pu:ButtonHelper.ClickBackground="#1AFFFFFF" pu:ButtonHelper.HoverBorderBrush="#E81123" pu:ButtonHelper.HoverBackground="#59FFFFFF" Click="加载进程BT_Click">
+            <Button.Background>
+                <SolidColorBrush Color="White" Opacity="0.25"/>
+            </Button.Background>
+        </Button>
+        <TextBox HorizontalAlignment="Left" Height="250" Margin="11,180,0,0" TextWrapping="Wrap" Text="日志模块加载错误" VerticalAlignment="Top" Width="500" FontSize="18" Padding="5,5,10,5" ScrollViewer.CanContentScroll="True" BorderBrush="#FF00AEFF" Foreground="White" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" VerticalScrollBarVisibility="Visible" pu:TextBoxHelper.ClearButtonVisibility="Visible" IsTabStop="False" HorizontalScrollBarVisibility="Auto" AllowDrop="True" IsReadOnly="True">
+            <TextBox.Background>
+                <SolidColorBrush Color="White" Opacity="0.25"/>
+            </TextBox.Background>
+        </TextBox>
+        <Button x:Name="最小化屏幕广播BT" Content="最小化屏幕广播" HorizontalAlignment="Left" Margin="11,95,0,0" VerticalAlignment="Top" Width="190" Height="80" BorderThickness="1" Foreground="White" BorderBrush="#FF00AEFF" FontSize="24" pu:ButtonHelper.ClickBackground="#1AFFFFFF" pu:ButtonHelper.HoverBorderBrush="#E81123" pu:ButtonHelper.HoverBackground="#59FFFFFF" Click="最小化屏幕广播BT_Click">
+            <Button.Background>
+                <SolidColorBrush Color="White" Opacity="0.25"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="最小化保持安静BT" Content="最小化保持安静" HorizontalAlignment="Left" Margin="206,95,0,0" VerticalAlignment="Top" Width="190" Height="80" BorderThickness="1" Foreground="White" BorderBrush="#FF00AEFF" FontSize="24" pu:ButtonHelper.ClickBackground="#1AFFFFFF" pu:ButtonHelper.HoverBorderBrush="#E81123" pu:ButtonHelper.HoverBackground="#59FFFFFF" Click="最小化保持安静BT_Click">
+            <Button.Background>
+                <SolidColorBrush Color="White" Opacity="0.25"/>
+            </Button.Background>
+        </Button>
+        <Label Content="CTRL+HOME键显示或隐藏本软件 | CTRL+END键安全退出" HorizontalAlignment="Left" Height="25" Margin="11,435,0,0" VerticalAlignment="Top" Width="500" Padding="0" Foreground="Lime" FontSize="16" Background="{x:Null}"/>
+        <Label Content="进程运行状态：" HorizontalAlignment="Left" Height="30" Margin="521,180,0,0" VerticalAlignment="Top" Width="145" Padding="0" Foreground="Lime" FontSize="22" Background="{x:Null}"/>
+        <Label Content="屏幕广播状态：" HorizontalAlignment="Left" Height="30" Margin="521,215,0,0" VerticalAlignment="Top" Width="145" Padding="0" Foreground="Lime" FontSize="22" Background="{x:Null}"/>
+        <Label Content="保持安静状态：" HorizontalAlignment="Left" Height="30" Margin="521,250,0,0" VerticalAlignment="Top" Width="145" Padding="0" Foreground="Lime" FontSize="22" Background="{x:Null}"/>
+        <Label x:Name="进程运行状态LB" Content="获取中" HorizontalAlignment="Left" Height="30" Margin="673,180,0,0" VerticalAlignment="Top" Width="68" Padding="0" Foreground="#FF4EC7FF" FontSize="22" Background="{x:Null}"/>
+        <Label x:Name="屏幕广播状态LB" Content="获取中" HorizontalAlignment="Left" Height="30" Margin="673,215,0,0" VerticalAlignment="Top" Width="68" Padding="0" Foreground="#FF4EC7FF" FontSize="22" Background="{x:Null}"/>
+        <Label x:Name="保持安静状态LB" Content="获取中" HorizontalAlignment="Left" Height="30" Margin="673,250,0,0" VerticalAlignment="Top" Width="68" Padding="0" Foreground="#FF4EC7FF" FontSize="22" Background="{x:Null}"/>
+        <CheckBox x:Name="解锁屏幕广播工具CB" Content="解锁屏幕广播工具" HorizontalAlignment="Left" Margin="523,379,0,0" VerticalAlignment="Top" Foreground="White" BorderBrush="#FF00AEFF" Padding="5,0,0,0" Width="177" VerticalContentAlignment="Center" FontSize="18" IsChecked="True" pu:CheckBoxHelper.HoverBorderBrush="#E81123" pu:CheckBoxHelper.HoverForeground="#FF4EC7FF"/>
+        <CheckBox x:Name="窗口置顶CB" Content="窗口置顶" HorizontalAlignment="Left" Margin="523,407,0,0" VerticalAlignment="Top" Foreground="White" BorderBrush="#FF00AEFF" Padding="5,0,0,0" Width="93" VerticalContentAlignment="Center" FontSize="18" pu:CheckBoxHelper.HoverBorderBrush="#E81123" pu:CheckBoxHelper.HoverForeground="#FF4EC7FF"/>
+    </Grid>
+</pu:WindowX>
